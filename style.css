@@ -1,0 +1,132 @@
+/* Configuração Global e Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #0a1929;
+  color: #ffffff;
+  padding: 30px;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Cabeçalho do Perfil - Bem arredondado */
+.perfil-header {
+  background: linear-gradient(135deg, #1e3a5f, #2c5282);
+  padding: 35px;
+  border-radius: 24px; /* Deixa as bordas bem arredondadas */
+  text-align: center;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.avatar {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%; /* Foto perfeitamente redonda */
+  object-fit: cover;
+  border: 4px solid #60a5fa;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+#nomeUsuario {
+  font-size: 28px;
+  color: #f0f7ff;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+#tituloUsuario {
+  font-size: 16px;
+  color: #bfdbfe;
+}
+
+/* Tabela de Informações com bordas arredondadas */
+table {
+  width: 100%;
+  border-collapse: separate; /* Permite arredondar as bordas da tabela */
+  border-spacing: 0;
+  background-color: #1e293b;
+  border-radius: 20px; /* Bordas arredondadas na tabela inteira */
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+th {
+  background-color: #2563eb;
+  color: white;
+  padding: 16px 20px;
+  text-align: left;
+  font-size: 15px;
+}
+
+td {
+  padding: 16px 20px;
+  border-bottom: 1px solid #334155;
+  color: #e2e8f0;
+}
+
+/* Remove a linha da última célula para ficar limpo */
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Efeito ao passar o mouse na linha */
+tbody tr:hover {
+  background-color: #334155;
+  transition: background-color 0.2s ease;
+}
+
+/* Larguras e cores das colunas */
+td:first-child {
+  font-weight: bold;
+  color: #93c5fd;
+  width: 25%;
+}
+
+td:nth-child(2) {
+  width: 25%;
+}
+
+td:nth-child(3) {
+  width: 50%;
+  color: #cbd5e1;
+}
+
+/* Responsividade para Celulares */
+@media (max-width: 600px) {
+  body {
+    padding: 15px;
+  }
+  
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  thead {
+    display: none;
+  }
+
+  td {
+    width: 100% !important;
+    display: block;
+    text-align: left;
+    padding: 12px 16px;
+  }
+
+  td:first-child {
+    background-color: #2563eb;
+    color: #ffffff;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+}
